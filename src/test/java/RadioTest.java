@@ -2,6 +2,17 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class RadioTest {
+
+    @Test
+    public void sizeRadioststion() {
+        Radio service = new Radio(10);
+        service.setCurrentRadioStation(9);
+
+        int expected = 9;
+        int actual = service.getCurrentRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
     @Test
     public void shouldCurrentRadioStation() {
         Radio service = new Radio();
@@ -24,7 +35,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
+        @Test
     public void shouldCurrentRadioStationAboveMax() {
         Radio service = new Radio();
         service.setCurrentRadioStation(10);
